@@ -1,0 +1,33 @@
+<h3>Write a new recipe (you crazy cook, you!)</h3>
+
+<form action="/add_ingredients/recipe/<%= @recipe.id %>" method="post">
+
+  <label for="name">What shall you call this dish?</label>
+  <input type="text" name="name" id="name">
+<br>
+  <label for="oven_temp">Preheat Oven?</label>
+  <input type="text" name="oven_temp" id="oven_temp">
+<br>
+  <label for="prep">Preparation, preparation, preparation</label>
+  <textarea name="prep" rows="5" id="prep" class="form-control"></textarea>
+<br>
+  <label for="steps">List out the steps:</label>
+  <textarea name="steps" rows="5" id="steps" class="form-control"></textarea>
+<br>
+  <label for="pairing">What to pair this dish with?</label>
+  <input type="text" name="pairing" id="pairing">
+<br>
+  <button type="submit">Go to Ingredients List</button>
+
+</form>
+
+
+<!-- To fix the bug on this page:
+
+Create new recipe (w/ name & id)
+
+Change form action to stay on page
+
+create_recipe/:id => with name/id and then add all the other stuff
+
+ -->
