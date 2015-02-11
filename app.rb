@@ -30,7 +30,7 @@ get("/create_recipe") do
 end
 
 post("/add_recipe") do
-  recipe = Recipe.create({ :name => params["name"], :ovem_temp => params["oven_temp"], :prep => params["prep"], :steps => params["steps"], :pairing => params["pairing"] })
+  recipe = Recipe.create({ :name => params["name"], :oven_temp => params["oven_temp"], :prep => params["prep"], :steps => params["steps"], :pairing => params["pairing"] })
   @recipes = Recipe.all()
   erb(:submissions)
 end
