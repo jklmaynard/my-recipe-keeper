@@ -1,15 +1,8 @@
-<h3>Help me think of something to eat!</h3>
 
-
-<a href="/categories" class="btn btn-lg btn-primary">GO!</a>
-
-<p>
-  OR...
-</p>
 <h3>Here's a list of your recipes</h3>
   <ul style="list-style: none;">
     <% @recipes.each() do |recipe| %>
-    <li><%= recipe.name() %></li>
+    <a href="/recipe/<%= recipe.id() %>"><li><%= recipe.name() %></li></a>
     <% end %>
   </ul>
 

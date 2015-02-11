@@ -13,15 +13,9 @@ get("/") do
   erb(:index)
 end
 
-get("/categories") do
-  @categories = Category.all()
-  erb(:categories)
-end
-
-post("/categories") do
-  category = Category.create({ :type_of => params["category_type"] })
-  @categories = Category.all()
-  redirect("categories")
+get("/recipe/:id") do
+  @recipe = Recipe.find(params["id"])
+  erb(:recipe)
 end
 
 get("/create_recipe") do
