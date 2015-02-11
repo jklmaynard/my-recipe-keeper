@@ -6,7 +6,12 @@
 <p>
   OR...
 </p>
-
+<h3>Here's a list of your recipes</h3>
+  <ul style="list-style: none;">
+    <% @recipes.each() do |recipe| %>
+    <li><%= recipe.name() %></li>
+    <% end %>
+  </ul>
 
 <h3>Create your own recipe!</h3>
 
