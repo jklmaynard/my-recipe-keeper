@@ -1,8 +1,12 @@
 require("bundler/setup")
 Bundler.require(:default)
 
+configure :development do 
+  set :bind, '0.0.0.0'
+  set :port, 3000
+end
+  
 Dir[File.dirname(__FILE__) + "/lib/*.rb"].each { |file| require file }
-
 
 get("/") do
   erb(:index)
